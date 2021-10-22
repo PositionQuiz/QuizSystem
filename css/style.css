@@ -131,6 +131,12 @@ footer .social ul li a {
     color: black;
 }
 
+footer .social ul li i {
+    color: black;
+    font-size: 1.3em;
+    margin-bottom: .5em;
+}
+
 footer .copyright {
     text-align: center;
 }
