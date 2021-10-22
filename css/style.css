@@ -93,6 +93,7 @@ main .body-main .DesBtn {
     padding: .8em 1em;
     margin: 1em 0 1em 2em;
     cursor: pointer;
+    color: white;
 }
 
 main .body-main .DesBtn a {
@@ -104,6 +105,20 @@ main .body-main .DesBtn:hover {
     background-color: #4d3413 ;
     transition: .3s;
 }
+
+main .body-main form {
+    margin-left: 2em;
+}
+
+.customButton {
+    border: 0;
+    background-color: black;
+    padding: .6em 2em;
+    border-radius: 1em;
+    color: whitesmoke;
+    margin-bottom: 1em;
+}
+
 
 main .main-image img {
     width: 60%;
