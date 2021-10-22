@@ -66,24 +66,15 @@ header nav a.active {
 main {
     padding: 4em 0 2em 0;
 }
-
-main .column {
-    /* 2 columns in main section */
-    float: left;
-    width: 50%;
+main .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-td{
-
+form table tr td{
     vertical-align: initial;
 }
 
-main .row:after {
-    /* Clear floats after the columns */
-    content: "";
-    display: table;
-    clear: both;
-}
 
 main .heading-main h1 {
     width: 1em;
@@ -154,6 +145,19 @@ main .main-image img {
     margin: 0 auto;
     display: block;
 }
+/*-----------------------------------------------*/
+/*---------------Toggle the left index section-----------------*/
+main .column.pd,main .column.td,main .column.log,main .column.Register,main .column.contactUs,main .column.signedinUser{
+    display: none;
+}
+main .column.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+/* -------------------------------- */
+
 
 footer .social {
     text-align: center;
