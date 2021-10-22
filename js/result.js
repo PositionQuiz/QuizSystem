@@ -16,4 +16,6 @@ document.getElementById("score1").style.color="red";
 
 
 
+
+
 }
