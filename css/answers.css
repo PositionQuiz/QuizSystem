@@ -1,0 +1,42 @@
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    background-color:#ffac42;
+
+}
+body{
+    border-radius: 1em;
+
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+h2{
+    color: darkcyan;
+    margin-top: 2em;
+    
+}
+.Answers{
+    text-align: center;
+    margin: 2em;
+    padding: 2em;
+    
+}
+.Question1,.Question2,.Question3,.Question4,.Question5{
+    background-color: #ffac42;
+    margin: 2em;
+    color: white;
+    
+}
+
+
+
+#ans1,#ans2,#ans3,#ans4,#ans5 {
+    color:darkcyan;
+    background-color: white;
+    
+}
