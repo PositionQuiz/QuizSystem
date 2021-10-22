@@ -1,0 +1,132 @@
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    background-color:#ffac42;
+
+}
+body{
+    border-radius: 1em;
+
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+nav {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Make the links to the right */
+    padding: 0 15px;
+}
+
+nav .brand a.navbar-brand {
+    cursor: unset;
+    /* Remove the Pointer from LOGO */
+    border: 0;
+    /* Remove the border from LOGO */
+}
+
+nav ul {
+    display: flex;
+    /* Make The links in ul in the same row */
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 1.2em;
+}
+
+header nav a {
+    color: black !important;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ffac42 !important;
+    transition: .3s;
+    border-bottom: 1px solid #ffac42;
+}
+
+header nav a.active {
+    color: #ffac42 !important;
+    transition: .3s;
+    border-bottom: 1px solid #ffac42;
+}
+h2{
+    color: darkcyan;
+    margin-top: 2em;
+    
+}
+.Answers{
+    text-align: center;
+    margin: 2em;
+    padding: 2em;
+    
+}
+.Question1,.Question2,.Question3,.Question4,.Question5{
+    background-color: #ffac42;
+    margin: 2em;
+    color: white;
+    
+}
+
+
+
+#ans1,#ans2,#ans3,#ans4,#ans5 {
+    color:darkcyan;
+    background-color: white;
+    
+}
+footer .social {
+    text-align: center;
+}
+
+footer .social ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0 auto;
+
+}
+
+footer .social ul li {
+    margin-right: 1em;
+    float: left;
+}
+
+footer .social ul li a {
+    color: black;
+}
+
+footer .social ul li i {
+    color: black;
+    font-size: 1.3em;
+    margin-bottom: .5em;
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+footer .copyright p {
+    margin: 0;
+    padding-bottom: 1em;
+    font-size: .8em;
+}
+
+@media screen and (max-width: 400px){
+
+    #ans1 ,#ans2 ,#ans3 ,#ans4 ,#ans5 {
+        
+        font-size: 0.7em;
+        
+    }
+    .Question1,.Question2,.Question3,.Question4,.Question5{
+        font-size: 0.7em;
+    }
+
+}
