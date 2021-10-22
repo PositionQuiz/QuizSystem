@@ -50,3 +50,11 @@ button{
     margin: 2%;
     border-radius:1em ;
 }
+
+
+@media screen and (max-width: 768px) {
+    button{
+        width:50%;
+    }
+}
+    
