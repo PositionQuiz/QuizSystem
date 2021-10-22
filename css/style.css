@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ffac42;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 1em;
+    margin-top: 5%;
+    background-color: white;
+    box-shadow: 0px 15px 35px -15px rgba(0,0,0,0.7);
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Make the links to the right */
+    padding: 0 15px;
+}
+
+nav .brand a.navbar-brand {
+    cursor: unset;
+    /* Remove the Pointer from LOGO */
+    border: 0;
+    /* Remove the border from LOGO */
+}
+
+nav ul {
+    display: flex;
+    /* Make The links in ul in the same row */
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 1.2em;
+}
+
+header nav a {
+    color: black !important;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ffac42 !important;
+    transition: .3s;
+    border-bottom: 1px solid #ffac42;
+}
+
+main {
+    padding: 4em 0 2em 0;
+}
+
+main .column {
+    /* 2 columns in main section */
+    float: left;
+    width: 50%;
+}
+
+
+main .row:after {
+    /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main .heading-main h1 {
+    width: 1em;
+    margin-left: 1em;
+}
+
+main .body-main p {
+    margin-left: 2em;
+    width: 90%;
+    line-height: 1.3em;
+}
+
+main .body-main .DesBtn {
+    border: 0;
+    background-color: black;
+    border-radius: 2em;
+    padding: .8em 1em;
+    margin: 1em 0 1em 2em;
+    cursor: pointer;
+}
+
+main .body-main .DesBtn a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+main .body-main .DesBtn:hover {
+    background-color: #4d3413 ;
+    transition: .3s;
+}
+
+main .main-image img {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+}
+
+footer .social {
+    text-align: center;
+}
+
+footer .social ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0 auto;
+
+}
+
+footer .social ul li {
+    margin-right: 1em;
+    float: left;
+}
+
+footer .social ul li a {
+    color: black;
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+footer .copyright p {
+    margin: 0;
+    padding-bottom: 1em;
+    font-size: .9em;
+}
