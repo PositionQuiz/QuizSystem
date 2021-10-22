@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    margin-top: 5%;
+    background-color: #ffac42;
+}
+
+main {
+    width: 750px;
+    height: 100%;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.question {
+    padding: 50px 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.question .question-Number {
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: rgb(0, 150, 136);
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(205, 205, 205);
+    line-height: 25px;
+}
+
+.question .questuion-Text {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 20px 0;
+    line-height: 32px;
+    color: black;
+    border-top: 1px solid rgb(205, 205, 205);
+}
+
+.question .option-Question {
+    width: 100%;
+}
+
+.question .option-Question .option {
+    text-align: left;
+    background-color: rgb(205, 205, 205);
+    padding: 15px;
+    font-size: 1.5em;
+    color: black;
+    border-radius: 5px;
+    line-height: 25px;
+    margin: 10px 0;
+}
+
+.question .option-Question .option:hover {
+    background-color: rgb(172, 170, 170);
+}
+
+.question .NextQustion button {
+    background-color: rgb(0, 150, 136);
+    margin: 20px 0;
+    width: 100PX;
+    height: 40PX;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-bottom: 35px;
+}
+
+.question .NextQustion button:hover {
+    background-color: rgb(32, 179, 164);
+}
+
+.questionDone {
+    display: flex;
+    flex-direction: row;
+}
+
+.questionDone div {
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(205, 205, 205);
+}
+
+@media (min-width:2000px) {
+    main {
+        width: 70%;
+        height: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    main {
+        border-radius: 0px;
+    }
+    body {
+        background-color: #ffffff;
+    }
+    .question {
+        padding: 50px 20px;
+    }
+}
