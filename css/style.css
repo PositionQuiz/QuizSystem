@@ -73,6 +73,10 @@ main .column {
     width: 50%;
 }
 
+td{
+
+    vertical-align: initial;
+}
 
 main .row:after {
     /* Clear floats after the columns */
@@ -132,6 +136,7 @@ main .body-main form textarea {
     background-color: black;
     color: whitesmoke;
     border-radius: 1em;
+    padding: .7em .7em;
 }
 
 .customButton {
