@@ -2,7 +2,7 @@
     padding:0%;
     margin: 0%;
     box-sizing: border-box;
-}
+}*
 html{
     background-color:#ffac42;
 
@@ -39,4 +39,17 @@ h2{
     color:darkcyan;
     background-color: white;
     
+}
+
+@media screen and (max-width: 400px){
+
+    #ans1 ,#ans2 ,#ans3 ,#ans4 ,#ans5 {
+        
+        font-size: 0.7em;
+        
+    }
+    .Question1,.Question2,.Question3,.Question4,.Question5{
+        font-size: 0.7em;
+    }
+
 }
