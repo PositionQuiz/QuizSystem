@@ -1,0 +1,60 @@
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+h2{
+    color: darkcyan;
+    margin-top: 2em;
+    
+}
+html{
+    background-color:#ffac42;
+
+}
+body{
+    border-radius: 1em;
+
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+main {
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+table td{
+   
+    border:darkcyan 1px solid;
+    width: 30%;
+    color: darkcyan;
+   font-size: 1.5em;
+    
+}
+table{
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 2em;
+    padding: 2em;
+}
+button{
+    width:10%;
+    background-color: darkcyan;
+    color: white;
+    font-size:1em ;
+    margin: 2%;
+    border-radius:1em ;
+}
+
+
+@media screen and (max-width: 768px) {
+    button{
+        width:50%;
+    }
+}
+    
