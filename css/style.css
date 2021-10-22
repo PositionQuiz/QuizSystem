@@ -17,7 +17,7 @@ body {
     border-radius: 1em;
     margin-top: 5%;
     background-color: white;
-    box-shadow: 0px 15px 35px -15px rgba(0,0,0,0.7);
+    box-shadow: 0px 15px 35px -15px rgba(0, 0, 0, 0.7);
 }
 
 nav {
@@ -52,6 +52,12 @@ header nav a {
 }
 
 header nav a:hover {
+    color: #ffac42 !important;
+    transition: .3s;
+    border-bottom: 1px solid #ffac42;
+}
+
+header nav a.active {
     color: #ffac42 !important;
     transition: .3s;
     border-bottom: 1px solid #ffac42;
@@ -96,18 +102,36 @@ main .body-main .DesBtn {
     color: white;
 }
 
+.sendBtn {
+    border: 0;
+    background-color: black;
+    border-radius: 2em;
+    padding: .8em 2.5em;
+    margin: 1em 0 1em 2em;
+    cursor: pointer;
+    color: white;
+}
+
 main .body-main .DesBtn a {
     color: whitesmoke;
     text-decoration: none;
 }
 
 main .body-main .DesBtn:hover {
-    background-color: #4d3413 ;
+    background-color: #4d3413;
     transition: .3s;
 }
 
 main .body-main form {
     margin-left: 2em;
+}
+
+main .body-main form textarea {
+    resize: none;
+    width: 19em;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 1em;
 }
 
 .customButton {

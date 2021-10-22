@@ -23,7 +23,7 @@
                 </a>
             </div>
             <ul>
-                <li><a href="#">Postion Description</a></li>
+                <li><a href="#" class="active">Postion Description</a></li>
                 <li><a href="#">Test Description</a></li>
                 <li><a href="#">Contact us</a></li>
                 <li><a href="#">Login</a></li>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="column">
                     <!-- Login Description -->
                     <div class="heading-main" id="log-heading">
@@ -90,8 +90,8 @@
                                 </tr>
                                 <tr>
                                     <td class="customText">Password</td>
-                                    <td><input type="password" name="password" id="password"
-                                            placeholder="Password" class="customButton"></td>
+                                    <td><input type="password" name="password" id="password" placeholder="Password"
+                                            class="customButton"></td>
                                 </tr>
                             </table>
 
@@ -101,36 +101,76 @@
                 </div>
 
                 <div class="column">
-                  <!-- Register Description -->
-                  <div class="heading-main" id="log-heading">
-                      <h1>
-                          Register
-                      </h1>
-                  </div>
-                  <div class="body-main" id="Register-main">
-                      <form name="Register">
-                          <table>
-                              <tr>
-                                  <td class="customText">Username</td>
-                                  <td><input type="text" name="username" id="username" placeholder="username"
-                                          class="customButton"></td>
-                              </tr>
-                              <tr>
-                                  <td class="customText">Password</td>
-                                  <td><input type="password" name="password" id="password"
-                                          placeholder="Password" class="customButton"></td>
-                              </tr>
-                              <tr>
-                                  <td class="customText">Confirm Password</td>
-                                  <td><input type="password" name="password2" id="password2"
-                                          placeholder="Password" class="customButton"></td>
-                              </tr>
-                          </table>
+                    <!-- Register Description -->
+                    <div class="heading-main" id="Register-heading">
+                        <h1>
+                            Register
+                        </h1>
+                    </div>
+                    <div class="body-main" id="Register-main">
+                        <form name="Register">
+                            <table>
+                                <tr>
+                                    <td class="customText">Username</td>
+                                    <td><input type="text" name="username" id="username" placeholder="username"
+                                            class="customButton"></td>
+                                </tr>
+                                <tr>
+                                    <td class="customText">Password</td>
+                                    <td><input type="password" name="password" id="password" placeholder="Password"
+                                            class="customButton"></td>
+                                </tr>
+                                <tr>
+                                    <td class="customText">Confirm Password</td>
+                                    <td><input type="password" name="password2" id="password2" placeholder="Password"
+                                            class="customButton"></td>
+                                </tr>
+                            </table>
 
-                          <input type="submit" value="Register" id="submitBtn" class="DesBtn" />
-                      </form>
-                  </div>
-              </div>
+                            <input type="submit" value="Register" id="submitBtn" class="DesBtn" />
+                        </form>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="heading-main">
+                        <h1>
+                            Contact us
+                        </h1>
+                    </div>
+
+                    <div class="body-main">
+                        <form name="contact">
+                            <table>
+                                <tr>
+                                    <td class="customText">Name</td>
+                                    <td><input type="text" name="username" id="username" placeholder="Name"
+                                            class="customButton" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="customText">Email</td>
+                                    <td><input type="email" name="email" id="email" placeholder="Email"
+                                            class="customButton" required></td>
+                                </tr>
+                                <tr>
+                                    <td class="customText">Msg</td>
+                                    <td><textarea placeholder="Tell us what's wrong" required rows="9"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select class="select form-group-input" placeholder="Choose one">
+                                            <option>Bug Report</option>
+                                            <option>Feature Request</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <input type="submit" value="Send" id="submitBtn" class="sendBtn" />
+                        </form>
+                    </div>
+                </div>
 
                 <div class="column">
                     <div class="main-image">
