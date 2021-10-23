@@ -21,7 +21,7 @@ body{
     margin-top: 5%;
 }
 nav {
-    height: 10vh;
+  /*  height: 10vh;*/
     display: flex;
     align-items: center;
     justify-content: space-between;
