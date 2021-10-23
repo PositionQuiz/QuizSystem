@@ -33,7 +33,6 @@ nav .brand a.navbar-brand {
     cursor: unset;
     /* Remove the Pointer from LOGO */
     border: 0;
-    /* Remove the border from LOGO */
 }
 
 nav ul {
