@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 * {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 html {
     background-color: #b85d62;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -19,9 +22,9 @@ body {
     background-color: white;
     box-shadow: 0px 15px 35px -15px rgba(0, 0, 0, 0.7);
 }
- 
+
 nav {
-   /* height: 10vh;*/
+    /* height: 10vh;*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,13 +45,13 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 1.2em;
+    /* margin-right: 1.2em; */ /* Margin the links in nav */
 }
 
 header nav a {
     color: #bd5c8f !important;
     text-decoration: none;
-    padding: .3em .9em; 
+    padding: .3em .9em;
 }
 
 header nav a:hover {
@@ -68,23 +71,36 @@ header nav a.active {
 }
 
 
-main .row{
+main .row {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
 }
 
-form table tr td{
+form table tr td {
     /* vertical-align: initial; */
 }
 
 
 main .heading-main h1 {
-    /* width: 1em; */
+    width: 1em;
     margin-left: 1em;
 }
 
-main .heading-main h1 span{
+main .heading-main h1.contact {
+    width: 100%;
+}
+
+main .heading-main span.text {
+    color: black !important;
+    font-weight: 400 !important;
+    font-size: 1em !important;
+    margin-left: .6em;
+}
+
+main .heading-main h1 span {
     color: #bd5c8f;
+    font-weight: bolder;
+    font-size: 1.8em;
 }
 
 main .body-main p {
@@ -125,6 +141,7 @@ main .body-main .DesBtn:hover {
 
 main .body-main form {
     margin-left: 2em;
+
 }
 
 main .body-main form textarea {
@@ -141,9 +158,11 @@ a.customText5 {
     color: #b85d62;
 }
 
-input::placeholder{
+input::placeholder,
+textarea::placeholder,input:focus, textarea:focus {
     color: rgba(255, 255, 255, 0.699);
-  }
+    outline: none;
+}
 
 .customButton {
     border: 0;
@@ -165,9 +184,15 @@ main .main-image img {
     margin: 0 auto;
     display: block;
 }
+
 /*-----------------------------------------------*/
 /*---------------Toggle the left index section-----------------*/
-main .column.pd,main .column.td,main .column.log,main .column.Register,main .column.contactUs,main .column.signedinUser{
+main .column.pd,
+main .column.td,
+main .column.log,
+main .column.Register,
+main .column.contactUs,
+main .column.signedinUser {
     visibility: hidden;
     position: absolute;
     opacity: 0;
@@ -176,7 +201,8 @@ main .column.pd,main .column.td,main .column.log,main .column.Register,main .col
     transition: 0.9s ease opacity;
 
 }
-main .column.active{
+
+main .column.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,6 +212,7 @@ main .column.active{
     transform: translateX(30px);
     transition: 0.9s ease all;
 }
+
 /* -------------------------------- */
 
 
