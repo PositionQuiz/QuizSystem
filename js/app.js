@@ -58,7 +58,7 @@ function loginTheUser(e) {
 
   for (let i = 0; i < usersArray.length; i++) {
     if (
-      usersArray[i].username == username &&
+      usersArray[i].username == username.toLowerCase() &&
       usersArray[i].password == password
     ) {
       toggleActive(columns, columns[5]);
@@ -109,6 +109,8 @@ function RegisterTheUser(e) {
   let password = e.target.password.value;
   let password2 = e.target.password2.value;
 
+
+  
   /************************ */
   /********check match passwords********* */
   if (password !== password2) {
@@ -120,7 +122,7 @@ function RegisterTheUser(e) {
     let exist = false;
 
     for (let i = 0; i < usersArray.length; i++) {
-      if (usersArray[i].username == username) {
+      if (usersArray[i].username.toLowerCase() == username.toLowerCase()) {
         alert("You have registered before please sign in");
         exist = true;
         return;
@@ -140,7 +142,7 @@ function RegisterTheUser(e) {
       links[3].removeEventListener("click", showLoginSection);
     }
     /*****add the user if not exist before****** */
-    let newUser = new User(username, password);
+    let newUser = new User(username.toLowerCase(), password);
     usersArray.push(newUser);
     localStorage.setItem("users", JSON.stringify(usersArray));
   }
