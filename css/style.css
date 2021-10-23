@@ -19,7 +19,7 @@ body {
     background-color: white;
     box-shadow: 0px 15px 35px -15px rgba(0, 0, 0, 0.7);
 }
-
+ 
 nav {
    /* height: 10vh;*/
     display: flex;
@@ -63,7 +63,7 @@ header nav a.active {
     background-color: #b8b5c6;
     padding: .3em .9em;
     border-radius: 1em;
-    color: #ffffff !important;
+    color: #bd5c8f !important;
 
 }
 
@@ -119,8 +119,8 @@ main .body-main .DesBtn a {
 }
 
 main .body-main .DesBtn:hover {
-    background-color: #4d3413;
-    transition: .3s;
+    background-color: #b85d62;
+    transition: .4s;
 }
 
 main .body-main form {
@@ -135,6 +135,15 @@ main .body-main form textarea {
     border-radius: 1em;
     padding: .7em .7em;
 }
+
+a.customText5 {
+    text-decoration: none;
+    color: #b85d62;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.699);
+  }
 
 .customButton {
     border: 0;
@@ -204,6 +213,11 @@ footer .social ul li i {
     color: #bd5c8f;
     font-size: 1.3em;
     margin-bottom: .5em;
+}
+
+footer .social ul li i:hover {
+    color: #b85d62;
+    transition: .3s;
 }
 
 footer .copyright {
