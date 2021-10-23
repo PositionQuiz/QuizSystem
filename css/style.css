@@ -72,12 +72,12 @@ main .row{
 }
 
 form table tr td{
-    vertical-align: initial;
+    /* vertical-align: initial; */
 }
 
 
 main .heading-main h1 {
-    width: 1em;
+    /* width: 1em; */
     margin-left: 1em;
 }
 
@@ -136,7 +136,7 @@ main .body-main form textarea {
     padding: .6em 2em;
     border-radius: 1em;
     color: whitesmoke;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 
 
@@ -148,13 +148,23 @@ main .main-image img {
 /*-----------------------------------------------*/
 /*---------------Toggle the left index section-----------------*/
 main .column.pd,main .column.td,main .column.log,main .column.Register,main .column.contactUs,main .column.signedinUser{
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-50px);
+    top: 0;
+    transition: 0.9s ease opacity;
+
 }
 main .column.active{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    visibility: visible;
+    position: relative;
+    opacity: 1;
+    transform: translateX(30px);
+    transition: 0.9s ease all;
 }
 /* -------------------------------- */
 
