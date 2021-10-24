@@ -1,4 +1,8 @@
-let Quizz = [{
+if(!localStorage.getItem("users")){
+    window.location.href = 'index.html';
+}
+else{
+    let Quizz = [{
         numb: 1,
         question: "What does HTML stand for?",
         answer: "Hyper Text Markup Language",
@@ -75,8 +79,13 @@ let numberofQuestion = 0;
 let numberofQuestionNext = 0;
 let counter;
 let counterLine;
+let lastAnswer="";
+let userScore = 0;
+let lastAnswerArray=[]
 nextButton.style.visibility = "hidden";
 nextButton.onclick = () => {
+    lastAnswerArray.push(lastAnswer)
+    console.log(lastAnswerArray)
     if (numberofQuestion < Quizz.length - 1) {
         numberofQuestion++;
         numberofQuestionNext++;
@@ -85,17 +94,24 @@ nextButton.onclick = () => {
         nextButton.style.visibility = "hidden";
 
         if (numberofQuestion == Quizz.length - 1) {
-            document.getElementById("bttnQ").innerHTML = "Submit";
+            let submitBtn= document.getElementById("bttnQ");
+            submitBtn.innerHTML = "Submit";
+            submitBtn.addEventListener("click",doSomething)
         }
     }
 }
-
+function doSomething(){
+    localStorage.setItem("Answers",JSON.stringify(lastAnswerArray))
+    console.log("yaser")
+    window.location.href = 'result.html';
+}
 function submitQuestion(index) {
     let totalQuestion = ' <span><p>' + ' Questions ' + (index + 1) + '</p> ' + ' <p>&nbsp' + ' of ' + '&nbsp</p> ' + Quizz.length + ' </p></span> ';
     questionNumber.innerHTML = totalQuestion;
 }
 
 function showQuestions(index) {
+    localStorage.setItem("Quiz",JSON.stringify(Quizz) )
     const questuion_Text = document.querySelector(".questuion-Text");
     let que_tag = '<span>' + Quizz[index].numb + ". " + Quizz[index].question + '</span>';
     let option_tag =
@@ -111,27 +127,15 @@ function showQuestions(index) {
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
 }
-let userScore = 0;
+
 
 function optionSelected(answer) {
-    let userAnswer = answer.textContent;
-    let correctAnswer = Quizz[numberofQuestion].answer;
-    const allOption = optionList.children.length;
-    if (userAnswer == correctAnswer) {
-        userScore++;
-        answer.classList.add("correct");
-        // answer.style.color = "green"
-        console.log(correctAnswer);
-    } else {
-        answer.classList.add("incorrect");
-        // answer.style.color = "red";
-        console.log("Wrong Answer");
-        for (i = 0; i < allOption; i++) {
-            if (optionList.children[i].textContent == correctAnswer) {}
-        }
+    // let correctAnswer = Quizz[numberofQuestion].answer;
+    for (let i = 0; i < optionList.children.length; i++) {
+        optionList.children[i].style.border="2px solid white"
     }
-    for (i = 0; i < allOption; i++) {
-        optionList.children[i].classList.add("disabled");
-    }
+    answer.style.border="2px solid black";
+    lastAnswer=answer.textContent;
     nextButton.style.visibility = "visible";
+}
 }
