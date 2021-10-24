@@ -151,8 +151,6 @@ function RegisterTheUser(e) {
 let submitCheck = document.getElementById("registerSubmitBtn");
 submitCheck.style.visibility = "hidden";
 
-
-
 function checkPsw() {
   let password = document.getElementById("registerPassword").value,
     password2 = document.getElementById("password2").value;
@@ -160,34 +158,34 @@ function checkPsw() {
     checkMatch = document.getElementById("checkMatch");
 
 
-
-  if (password !== 6 || password !== password2) {
-
-    if (password.length < 6) {
+    if (password !== 6 && password2 !== 6 || password !== password2) {
+      submitCheck.style.visibility = "hidden";
       document.getElementById("checkLength").style.color = "red";
+      document.getElementById("checkMatch").style.color = "red";
       checkLength.innerHTML = "The Password is Short";
-      submitCheck.style.visibility = "hidden";
-    } 
-    
-    else {
-      document.getElementById("checkLength").style.color = "green";
-      checkLength.innerHTML = "Good Password!";
-    }
-
-    if (password !== password2) {
       checkMatch.innerHTML = "Passwords do not match";
-      submitCheck.style.visibility = "hidden";
+
+      if (password.length >= 6 ) {
+        document.getElementById("checkLength").style.color = "green";
+        checkLength.innerHTML = "Password length is good!";
+      } 
+  
+      if (password === password2) {
+        document.getElementById("checkMatch").style.color = "green";
+        checkMatch.innerHTML = "Password matching!";
+        submitCheck.style.visibility = "visible";
+
+      } if (password.length < 6 || password2.length < 6 || password !== password2) {
+        submitCheck.style.visibility = "hidden";
+
+      } else {
+        submitCheck.style.visibility = "visible";
+      }
+  
+  
     } 
-    
-    else {
-      document.getElementById("checkMatch").style.color = "green";
-      checkMatch.innerHTML = "Password matching!";
 
-      submitCheck.style.visibility = "visible";
-    }
-    
 
-  } 
 
 } 
 
