@@ -1,22 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 html {
     background-color: #b85d62;
-    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    margin: auto;
-    margin-top: 5%;
-    width: 750px;
-    height: 100%;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 1em;
+    margin-top: 2.5%;
     background-color: white;
-    border-radius: 25px;
+    box-shadow: 0px 15px 35px -15px rgba(0, 0, 0, 0.7);
 }
 
 nav {
@@ -41,35 +46,32 @@ nav ul {
     list-style: none;
 }
 
-nav ul li {
-    margin-right: 1.2em;
-}
-
 header nav a {
-    color: black !important;
+    color: #bd5c8f !important;
     text-decoration: none;
 }
 
 header nav a:hover {
-    color: #ffac42 !important;
+    color: #bd5c8f !important;
     transition: .3s;
-    border-bottom: 1px solid #ffac42;
 }
 
 header nav a.active {
-    color: #ffac42 !important;
     transition: .3s;
-    border-bottom: 1px solid #ffac42;
+    background-color: #b8b5c6;
+    padding: .3em .9em;
+    border-radius: 1em;
+    color: #bd5c8f !important;
 }
 
 .question {
     font-family: 'Montserrat', sans-serif;
-    padding: 50px 100px;
+    
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: left;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .question .question-Number {
@@ -77,50 +79,61 @@ header nav a.active {
     text-align: left;
     font-size: 1.1em;
     font-weight: 700;
-    color:  #bd5c8f;
-    padding-bottom: 10px;
-    line-height: 25px;
+    color:  #b8b5c6;
+    margin: 1.25em 0 .5em 0;
+}
+
+.question .question-Number:after {
+    content:"";
+    position: absolute;
+    top: 10rem;
+    left: 39.65em;
+    right: 0;
+    width: 8em;
+    border-top: 2px solid #ca006c;
+    z-index: 1;
 }
 
 .question .questuion-Text {
     margin: 0;
-    font-size: 1.5em;
-    font-weight: 500;
-    padding: 20px 0;
-    line-height: 32px;
-    color: black;
-    border-top: 1px solid rgb(205, 205, 205);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: .35em;
+    margin-bottom: .7em;
+    color: #ca006c;
 }
 
 .question .option-Question {
-    width: 100%;
+    width: 30%;
+    margin: 0 auto;
 }
 
 .question .option-Question .option {
-    text-align: left;
+    text-align: center;
     background-color: #b8b5c6;
-    padding: 15px;
-    font-size: 1.5em;
-    color: black;
-    border-radius: 5px;
-    line-height: 25px;
-    margin: 10px 0;
-    border: 2px solid white;
+    color: whitesmoke;
+    padding: .8em;
+    font-size: 1em;
+    border-radius: 1.5em;
+    margin-top: .9em;
+    outline: hidden;
+    cursor: pointer;
 }
 
-.question .option-Question .option:hover {
+.question .option-Question .option:hover,
+.question .option-Question .option:focus  {
     background-color: rgb(189, 141, 168);
+    
 }
 
 .question .NextQustion button {
-    background-color:#bd5c8f;
-    margin: 20px 0;
-    width: 100PX;
-    height: 40PX;
-    border-radius: 5px;
+    background-color:#bd5c90;
+    margin: 1.5em 0 1em 0;
+    padding: .7em 2em;
+    border-radius: 2em;
     border: none;
     color: white;
-    margin-bottom: 35px;
+    cursor: pointer;
 }
 
 .question .NextQustion button:hover {
@@ -138,14 +151,15 @@ header nav a.active {
 
 .questionDone div {
     margin: 0 5px;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #b8b5c6;
 }
 
 footer .social {
     text-align: center;
+    margin-top: 3em;
 }
 
 footer .social ul {
