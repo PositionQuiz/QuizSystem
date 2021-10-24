@@ -10,7 +10,6 @@ const loginToStartBtn = document.querySelector(".column.td button");
 const links = document.querySelectorAll("header nav ul li a");
 const columns = document.querySelectorAll(".row .column");
 
-
 // ----------------------------
 // ----------- the events functionality --------
 links[0].addEventListener("click", showPositionDescSection);
@@ -55,30 +54,31 @@ function loginTheUser(e) {
   let username = e.target.username.value;
   let password = e.target.password.value;
 
-
   let exist = false;
 
   for (let i = 0; i < usersArray.length; i++) {
-    if (usersArray[i].username==username && usersArray[i].password==password) {
+    if (
+      usersArray[i].username == username.toLowerCase() &&
+      usersArray[i].password == password
+    ) {
+      toggleActive(columns, columns[5]);
+      document.getElementById("showUserName").innerHTML = username;
+      let loginLink = document.querySelector(".loginLink");
+      console.log(loginLink);
+      loginLink.innerHTML = username;
 
-        toggleActive(columns, columns[5]);
-        document.getElementById("showUserName").innerHTML = username;
-        let loginLink = document.querySelector(".loginLink");
-        console.log (loginLink)
-        loginLink.innerHTML = username;
+      links[0].style.display = "none";
+      links[1].style.display = "none";
+      links[2].style.display = "none";
 
-        links[0].style.display = "none";
-        links[1].style.display = "none";
-        links[2].style.display = "none";
-
-        links[3].removeEventListener("click", showLoginSection);
-        exist = true;
-        return;
-    } 
-}
-if (!exist) {
+      links[3].removeEventListener("click", showLoginSection);
+      exist = true;
+      return;
+    }
+  }
+  if (!exist) {
     alert("Your Username or Password is incorrect!");
-}
+  }
 }
 
 class User {
@@ -101,55 +101,95 @@ if (localStorage.getItem("users")) {
 
 const registerForm = document.querySelector("form[name='Register']");
 registerForm.addEventListener("submit", RegisterTheUser);
-function RegisterTheUser(e){
-    e.preventDefault();
-    /*************************** */
-    /**********fetch the user inputs******** */
-    let username=e.target.username.value;
-    let password=e.target.password.value;
-    let password2=e.target.password2.value;
-    /************************ */
-    /********check match passwords********* */
-    if (password!==password2) {
-        alert("the passwords not match")
+function RegisterTheUser(e) {
+  e.preventDefault();
+  /*************************** */
+  /**********fetch the user inputs******** */
+  let username = e.target.username.value;
+  let password = e.target.password.value;
+  let password2 = e.target.password2.value;
+
+
+  
+  /************************ */
+  /********check match passwords********* */
+  if (password !== password2) {
+    checkPswMatch.innerHTML = "The Password Doesn't Match";
+  } else {
+    /**************** */
+    /****check if the user exist ****** */
+
+    let exist = false;
+
+    for (let i = 0; i < usersArray.length; i++) {
+      if (usersArray[i].username.toLowerCase() == username.toLowerCase()) {
+        alert("You have registered before please sign in");
+        exist = true;
+        return;
+      }
     }
-    else{
-        /**************** */
-        /****check if the user exist ****** */
+    if (!exist) {
+      toggleActive(columns, columns[5]);
+      document.getElementById("showUserName").innerHTML = username;
+      let loginLink = document.querySelector(".loginLink");
+      console.log(loginLink);
+      loginLink.innerHTML = username;
 
-        let exist = false;
+      links[0].style.display = "none";
+      links[1].style.display = "none";
+      links[2].style.display = "none";
 
-        for (let i = 0; i < usersArray.length; i++) {
-            if (usersArray[i].username==username) {
-                alert("You have registered before please sign in");
-
-                exist = true;
-                return;
-            }
-        }
-        if(!exist) {
-            toggleActive(columns, columns[5]);
-            document.getElementById("showUserName").innerHTML = username;
-            let loginLink = document.querySelector(".loginLink");
-            console.log (loginLink)
-            loginLink.innerHTML = username;
-    
-            links[0].style.display = "none";
-            links[1].style.display = "none";
-            links[2].style.display = "none";
-    
-            links[3].removeEventListener("click", showLoginSection);
-        }
-        /*****add the user if not exist before****** */
-        let newUser=new User(username,password);
-        usersArray.push(newUser)
-        localStorage.setItem("users", JSON.stringify(usersArray) )
-        
+      links[3].removeEventListener("click", showLoginSection);
     }
-    
-
-
+    /*****add the user if not exist before****** */
+    let newUser = new User(username.toLowerCase(), password);
+    usersArray.push(newUser);
+    localStorage.setItem("users", JSON.stringify(usersArray));
+  }
 }
+
+let submitCheck = document.getElementById("registerSubmitBtn");
+submitCheck.style.visibility = "hidden";
+
+
+
+function checkPsw() {
+  let password = document.getElementById("registerPassword").value,
+    password2 = document.getElementById("password2").value;
+  let checkLength = document.getElementById("checkLength"),
+    checkMatch = document.getElementById("checkMatch");
+
+
+
+  if (password !== 6 || password !== password2) {
+
+    if (password.length < 6) {
+      document.getElementById("checkLength").style.color = "red";
+      checkLength.innerHTML = "The Password is Short";
+      submitCheck.style.visibility = "hidden";
+    } 
+    
+    else {
+      document.getElementById("checkLength").style.color = "green";
+      checkLength.innerHTML = "Good Password!";
+    }
+
+    if (password !== password2) {
+      checkMatch.innerHTML = "Passwords do not match";
+      submitCheck.style.visibility = "hidden";
+    } 
+    
+    else {
+      document.getElementById("checkMatch").style.color = "green";
+      checkMatch.innerHTML = "Password matching!";
+
+      submitCheck.style.visibility = "visible";
+    }
+    
+
+  } 
+
+} 
 
 const regesterLink = document.querySelector(
   "form[name='login'] td a.registerLink"

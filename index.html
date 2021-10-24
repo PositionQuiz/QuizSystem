@@ -121,19 +121,20 @@
                 <tr>
                   <td class="customText">Password</td>
                   <td><input type="password" name="password" id="registerPassword" placeholder="Password"
-                      class="customButton" required></td>
+                      class="customButton" required onkeyup="checkPsw()"></td>
                 </tr>
                 <tr>
                   <td class="customText">Repeat Password</td>
                   <td><input type="password" name="password2" id="password2" placeholder="Repeat your password"
-                      class="customButton" required></td>
+                      class="customButton" required onkeyup="checkPsw()"></td>
                 </tr>
                 <tr>
                   <td><a href="#" class="goToLoginLink customText5">Have an account?</a></td>
                 </tr>
               </table>
-
               <input type="submit" value="Register" id="registerSubmitBtn" class="DesBtn" />
+              <div class="checkPsw1" id="checkLength" onkeyup="checkPsw()"></div>
+              <div class="checkPsw1" id="checkMatch" onkeyup="checkPsw()"></div>
             </form>
           </div>
         </div>
