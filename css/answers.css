@@ -60,12 +60,15 @@ header nav a.active {
 h2{
     color: #bd5c8f;
     margin-top: 2em;
+    margin: auto;
+    text-align: center;
     
 }
 .Answers{
     text-align: center;
-    margin: 2em;
-    padding: 2em;
+    margin: 1em;
+    max-height: 65vh;
+    overflow: auto;
     
 }
 .Question{

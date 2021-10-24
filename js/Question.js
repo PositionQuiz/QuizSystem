@@ -1,4 +1,4 @@
-if(!localStorage.getItem("users")){
+if(!localStorage.getItem("users")||!sessionStorage.getItem("signedInUser")){
     window.location.href = 'index.html';
 }
 else{
@@ -71,7 +71,8 @@ else{
 ];
 // **********************************************************************************************
 
-
+const questionNavLink=document.querySelector("nav ul li a.active")
+questionNavLink.innerHTML=JSON.parse(sessionStorage.getItem("signedInUser"))
 const optionList = document.querySelector(".option-Question");
 const nextButton = document.querySelector("#bttnQ");
 const questionNumber = document.querySelector(".question-Number");

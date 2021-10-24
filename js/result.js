@@ -1,7 +1,9 @@
-if(!localStorage.getItem("users")){
+if(!localStorage.getItem("users")||!sessionStorage.getItem("signedInUser")){
     window.location.href = 'index.html';
 }
 else{
+const questionNavLink=document.querySelector("nav ul li a.active")
+questionNavLink.innerHTML=JSON.parse(sessionStorage.getItem("signedInUser"))
 let ratio=document.getElementById("percentageSpan");
 let Quizz=JSON.parse(localStorage.getItem("Quiz"));
 let Answers=JSON.parse(localStorage.getItem("Answers"))
@@ -53,6 +55,7 @@ logoutBtn.addEventListener("click",removeStorageAndRedirect)
 function removeStorageAndRedirect(e){
     e.preventDefault();
     localStorage.clear();
+    sessionStorage.clear();
     window.location.href='index.html';
 }
 }

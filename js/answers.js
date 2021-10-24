@@ -1,4 +1,4 @@
-if(!localStorage.getItem("users")){
+if(!localStorage.getItem("users")||!sessionStorage.getItem("signedInUser")){
     window.location.href = 'index.html';
 }
 else
@@ -8,6 +8,7 @@ else
     answerNavLink.addEventListener("click",logoutFunc)
     function logoutFunc(){
         localStorage.clear();
+        sessionStorage.clear();
         window.location.href = 'index.html';
     }
   let Quiz = JSON.parse(localStorage.getItem("Quiz"));
