@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 h2{
-    color: darkcyan;
+    color: #bd5c8f;
     margin-top: 2em;
     
 }
 html{
-    background-color:#ffac42;
+    background-color: #b85d62;
+    font-family: 'Montserrat', sans-serif;
 
 }
 body{
@@ -71,9 +72,9 @@ main {
 
 table td{
    
-    border:darkcyan 1px solid;
+    border:#b8b5c6 1px solid;
     width: 30%;
-    color: darkcyan;
+    color:black;
    font-size: 1.5em;
     
 }
@@ -85,7 +86,7 @@ table{
 }
 button{
     width:10%;
-    background-color: darkcyan;
+    background-color: #bd5c8f;
     color: white;
     font-size:1em ;
     margin: 2%;
@@ -108,11 +109,11 @@ footer .social ul li {
 }
 
 footer .social ul li a {
-    color: black;
+    color: #bd5c8f;
 }
 
 footer .social ul li i {
-    color: black;
+    color: #bd5c8f;
     font-size: 1.3em;
     margin-bottom: .5em;
 }
@@ -125,6 +126,10 @@ footer .copyright p {
     margin: 0;
     padding-bottom: 1em;
     font-size: .8em;
+}
+footer .copyright span{
+    color: #bd5c8f;
+
 }
 
 @media screen and (max-width: 768px) {
