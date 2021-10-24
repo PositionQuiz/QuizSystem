@@ -36,9 +36,9 @@ else
     let newParagraph = document.createElement("p");
     newParagraph.innerHTML = answersArray[i];
     if (answersStatus[i] != true) {
-      newParagraph.style.color = "red";
+      newParagraph.style.color = "#8e4043";
     } else {
-      newParagraph.style.color = "green";
+      newParagraph.style.color = "#408e64";
     }
     newSection.append(newParagraph);
   }

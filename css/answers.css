@@ -49,19 +49,25 @@ header nav a {
 header nav a:hover {
     color: #ffac42 !important;
     transition: .3s;
-    border-bottom: 1px solid #ffac42;
+    /*border-bottom: 1px solid #ffac42;*/
+}
+header nav a.active {
+    transition: .3s;
+    font-size: 1.1em;
+   /* background-color: #b8b5c6;*/
+    padding: .3em .9em;
+    border-radius: 1em;
+    color: #bd5c8f !important;
 }
 
-header nav a.active {
-    color: #ffac42 !important;
-    transition: .3s;
-    border-bottom: 1px solid #ffac42;
-}
 h2{
     color: #bd5c8f;
     margin-top: 2em;
     margin: auto;
     text-align: center;
+    
+    
+    font-size: 1.75em;
     
 }
 .Answers{
@@ -72,10 +78,13 @@ h2{
     
 }
 .Question{
-    background-color: #bd5c8f;
+  background-color: #b8b5cd;
     margin: 2em;
-    color: white;
-    border-radius: 0.2em;
+    color:#406a8e;
+    font-size: 1.3em;
+    width: 60%;
+    margin: 20px auto;
+    
     
 }
 
@@ -84,6 +93,7 @@ h2{
 #ans {
     color:black;
     background-color: white;
+    font-size: 0.8em;
     
 }
 footer .social {
@@ -135,5 +145,10 @@ footer .copyright span {
     .Question{
         font-size: 0.7em;
     }
-
+    header nav a.active{
+        font-size: 0.5em;
+    }
+    .brand a img{
+        width: 100px !important;
+    }
 }
