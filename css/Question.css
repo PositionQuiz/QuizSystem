@@ -6,13 +6,13 @@
 }
 
 html {
-    background-color: #ffac42;
+    background-color: #b85d62;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    margin:auto;
+    margin: auto;
     margin-top: 5%;
-
     width: 750px;
     height: 100%;
     background-color: white;
@@ -20,7 +20,7 @@ body {
 }
 
 nav {
-    height: 10vh;
+    /* height: 10vh;*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,7 +61,9 @@ header nav a.active {
     transition: .3s;
     border-bottom: 1px solid #ffac42;
 }
+
 .question {
+    font-family: 'Montserrat', sans-serif;
     padding: 50px 100px;
     width: 100%;
     display: flex;
@@ -71,12 +73,12 @@ header nav a.active {
 }
 
 .question .question-Number {
+    font-family: 'Montserrat', sans-serif;
     text-align: left;
     font-size: 1.1em;
     font-weight: 700;
-    color: rgb(0, 150, 136);
+    color:  #bd5c8f;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgb(205, 205, 205);
     line-height: 25px;
 }
 
@@ -96,21 +98,22 @@ header nav a.active {
 
 .question .option-Question .option {
     text-align: left;
-    background-color: rgb(205, 205, 205);
+    background-color: #b8b5c6;
     padding: 15px;
     font-size: 1.5em;
     color: black;
     border-radius: 5px;
     line-height: 25px;
     margin: 10px 0;
+    border: 2px solid white;
 }
 
 .question .option-Question .option:hover {
-    background-color: rgb(172, 170, 170);
+    background-color: rgb(189, 141, 168);
 }
 
 .question .NextQustion button {
-    background-color: rgb(0, 150, 136);
+    background-color:#bd5c8f;
     margin: 20px 0;
     width: 100PX;
     height: 40PX;
@@ -121,7 +124,7 @@ header nav a.active {
 }
 
 .question .NextQustion button:hover {
-    background-color: rgb(32, 179, 164);
+    background-color: #b8b5c6;
 }
 
 .questionDone {
@@ -129,13 +132,18 @@ header nav a.active {
     flex-direction: row;
 }
 
+.question-Number span {
+    display: flex;
+}
+
 .questionDone div {
     margin: 0 5px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgb(205, 205, 205);
+    background-color: #b8b5c6;
 }
+
 footer .social {
     text-align: center;
 }
@@ -144,7 +152,6 @@ footer .social ul {
     list-style: none;
     display: inline-block;
     margin: 0 auto;
-
 }
 
 footer .social ul li {
@@ -153,11 +160,13 @@ footer .social ul li {
 }
 
 footer .social ul li a {
-    color: black;
+    color: #bd5c8f;
+
 }
 
 footer .social ul li i {
-    color: black;
+    color:      #bd5c8f;
+    
     font-size: 1.3em;
     margin-bottom: .5em;
 }
@@ -170,6 +179,10 @@ footer .copyright p {
     margin: 0;
     padding-bottom: 1em;
     font-size: .8em;
+    
+}
+footer .copyright span {
+    color: #bd5c8f;
 }
 
 @media (min-width:2000px) {
