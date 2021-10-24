@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 html{
-    background-color:#ffac42;
-
+    background-color: #b85d62;
+    font-family: 'Montserrat', sans-serif;
 }
 body{
     border-radius: 1em;
@@ -58,7 +58,7 @@ header nav a.active {
     border-bottom: 1px solid #ffac42;
 }
 h2{
-    color: darkcyan;
+    color: #bd5c8f;
     margin-top: 2em;
     
 }
@@ -69,16 +69,17 @@ h2{
     
 }
 .Question1,.Question2,.Question3,.Question4,.Question5{
-    background-color: #ffac42;
+    background-color: #bd5c8f;
     margin: 2em;
     color: white;
+    border-radius: 0.2em;
     
 }
 
 
 
 #ans1,#ans2,#ans3,#ans4,#ans5 {
-    color:darkcyan;
+    color:black;
     background-color: white;
     
 }
@@ -99,11 +100,11 @@ footer .social ul li {
 }
 
 footer .social ul li a {
-    color: black;
+    color: #bd5c8f;
 }
 
 footer .social ul li i {
-    color: black;
+    color: #bd5c8f;
     font-size: 1.3em;
     margin-bottom: .5em;
 }
@@ -116,6 +117,9 @@ footer .copyright p {
     margin: 0;
     padding-bottom: 1em;
     font-size: .8em;
+}
+footer .copyright span {
+    color: #bd5c8f;
 }
 
 @media screen and (max-width: 400px){
