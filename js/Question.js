@@ -132,9 +132,11 @@ function showQuestions(index) {
 function optionSelected(answer) {
     // let correctAnswer = Quizz[numberofQuestion].answer;
     for (let i = 0; i < optionList.children.length; i++) {
-        optionList.children[i].style.border="2px solid white"
+        optionList.children[i].style.backgroundColor = "#b8b5c6";
     }
-    answer.style.border="2px solid black";
+
+    answer.style.backgroundColor = "#bd8da8"
+    
     lastAnswer=answer.textContent;
     nextButton.style.visibility = "visible";
 }
