@@ -1,22 +1,44 @@
- let Quiz=JSON.parse(localStorage.getItem("Quiz"));
- let usersAnswerArray=JSON.parse(localStorage.getItem("Answers"));
-let questionsArray=[];
-let answersArray=[];
-for (let i = 0; i < Quiz.length; i++) {
+if(!localStorage.getItem("users")){
+    window.location.href = 'index.html';
+}
+else
+{
+    let answerNavLink=document.querySelector("nav ul li a.active");
+    answerNavLink.textContent="Logout";
+    answerNavLink.addEventListener("click",logoutFunc)
+    function logoutFunc(){
+        localStorage.clear();
+        window.location.href = 'index.html';
+    }
+  let Quiz = JSON.parse(localStorage.getItem("Quiz"));
+  let usersAnswerArray = JSON.parse(localStorage.getItem("Answers"));
+  let answersContainer = document.querySelector(".Answers");
+  let questionsArray = [];
+  let answersArray = [];
+  let answersStatus = [];
+  for (let i = 0; i < Quiz.length; i++) {
     questionsArray.push(Quiz[i].question);
     answersArray.push(usersAnswerArray[i]);
-//   console.log(Quiz[i].answer);    
-}
-let answersContainer=document.querySelector(".Answers");
-for(i=0;i<questionsArray.length;i++){
-    let newDiv=document.createElement("div");
-    newDiv.setAttribute("class",`Question${i+1}`);
-    newDiv.innerHTML=questionsArray[i];
+    answersStatus.push(Quiz[i].answer == usersAnswerArray[i]);
+  }
+
+  /******************** */
+  /******loop to create and show the questions and answers ******** */
+  for (i = 0; i < questionsArray.length; i++) {
+    let newDiv = document.createElement("div");
+    newDiv.setAttribute("class", `Question`);
+    newDiv.innerHTML = questionsArray[i];
     answersContainer.append(newDiv);
-    let newSection=document.createElement("section");
-    newSection.setAttribute("id",`ans${i+1}`);
+    let newSection = document.createElement("section");
+    newSection.setAttribute("id", `ans`);
     newDiv.append(newSection);
-    let newParagraph=document.createElement("p");
-    newParagraph.innerHTML=answersArray[i];
+    let newParagraph = document.createElement("p");
+    newParagraph.innerHTML = answersArray[i];
+    if (answersStatus[i] != true) {
+      newParagraph.style.color = "red";
+    } else {
+      newParagraph.style.color = "green";
+    }
     newSection.append(newParagraph);
+  }
 }

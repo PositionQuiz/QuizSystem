@@ -59,13 +59,13 @@ else{
     },
     //   {
     //   numb: 6,
-    //   question: "",
-    //   answer: "",
+    //   question: "test",
+    //   answer: "Option1",
     //   options: [
-    //     "Option",
-    //     "option",
-    //     "option",
-    //     "option"
+    //     "Option1",
+    //     "option2",
+    //     "option3",
+    //     "option4"
     //   ]
     // },
 ];
@@ -111,6 +111,9 @@ function submitQuestion(index) {
 }
 
 function showQuestions(index) {
+    let totalQuestion = ' <span><p>' + ' Questions ' + (index + 1) + '</p> ' + ' <p>&nbsp' + ' of ' + '&nbsp</p> ' + Quizz.length + ' </p></span> ';
+    questionNumber.innerHTML = totalQuestion;
+
     localStorage.setItem("Quiz",JSON.stringify(Quizz) )
     const questuion_Text = document.querySelector(".questuion-Text");
     let que_tag = '<span>' + Quizz[index].numb + ". " + Quizz[index].question + '</span>';

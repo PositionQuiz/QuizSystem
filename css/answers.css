@@ -68,7 +68,7 @@ h2{
     padding: 2em;
     
 }
-.Question1,.Question2,.Question3,.Question4,.Question5{
+.Question{
     background-color: #bd5c8f;
     margin: 2em;
     color: white;
@@ -78,7 +78,7 @@ h2{
 
 
 
-#ans1,#ans2,#ans3,#ans4,#ans5 {
+#ans {
     color:black;
     background-color: white;
     
@@ -124,12 +124,12 @@ footer .copyright span {
 
 @media screen and (max-width: 400px){
 
-    #ans1 ,#ans2 ,#ans3 ,#ans4 ,#ans5 {
+    #ans {
         
         font-size: 0.7em;
         
     }
-    .Question1,.Question2,.Question3,.Question4,.Question5{
+    .Question{
         font-size: 0.7em;
     }
 
