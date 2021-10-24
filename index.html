@@ -99,6 +99,8 @@
               </table>
 
               <input type="submit" value="Login" id="loginSubmitBtn" class="DesBtn" />
+
+              <div class="errorMsg" id="errorLogin" style="color: red;"> </div>
             </form>
           </div>
         </div>
@@ -133,8 +135,9 @@
                 </tr>
               </table>
               <input type="submit" value="Register" id="registerSubmitBtn" class="DesBtn" />
-              <div class="checkPsw1" id="checkLength" onkeyup="checkPsw()"></div>
-              <div class="checkPsw1" id="checkMatch" onkeyup="checkPsw()"></div>
+              <div class="errorMsg" id="checkLength" onkeyup="checkPsw()"></div>
+              <div class="errorMsg" id="checkMatch" onkeyup="checkPsw()"></div>
+              <div class="errorMsg" id="userExist" style="color: red;"></div>
             </form>
           </div>
         </div>

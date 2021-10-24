@@ -39,7 +39,7 @@ nav .brand a.navbar-brand {
     border: 0;
 }
 
-.checkPsw1 {
+.errorMsg {
     font-size: .8em;
 }
 

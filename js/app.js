@@ -77,7 +77,7 @@ function loginTheUser(e) {
     }
   }
   if (!exist) {
-    alert("Your Username or Password is incorrect!");
+    document.getElementById("errorLogin").innerHTML = "Your Username or Password is incorrect!";
   }
 }
 
@@ -123,7 +123,7 @@ function RegisterTheUser(e) {
 
     for (let i = 0; i < usersArray.length; i++) {
       if (usersArray[i].username.toLowerCase() == username.toLowerCase()) {
-        alert("You have registered before please sign in");
+        document.getElementById("userExist").innerHTML = "The username is already registered, Please Sign in"
         exist = true;
         return;
       }
