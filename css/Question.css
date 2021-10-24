@@ -83,17 +83,6 @@ header nav a.active {
     margin: 1.25em 0 .5em 0;
 }
 
-.question .question-Number:after {
-    content:"";
-    position: absolute;
-    top: 10rem;
-    left: 39.65em;
-    right: 0;
-    width: 8em;
-    border-top: 2px solid #ca006c;
-    z-index: 1;
-}
-
 .question .questuion-Text {
     margin: 0;
     font-size: 1.2em;
@@ -209,11 +198,19 @@ footer .copyright span {
 @media (max-width:768px) {
     body {
         border-radius: 0px;
+        width: 100%;
+        margin: 0;
     }
-    html {
-        background-color: #ffffff;
+
+
+
+    .question .option-Question {
+        width: 40%;
     }
-    .question {
-        padding: 50px 20px;
+}
+
+@media (max-width:426px){
+    .question .option-Question {
+        width: 70%;
     }
 }
