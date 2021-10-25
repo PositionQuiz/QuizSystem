@@ -65,10 +65,9 @@ function loginTheUser(e) {
       document.getElementById("showUserName").innerHTML = username;
       let loginLink = document.querySelector(".loginLink");
       loginLink.innerHTML = username;
-
-      links[0].style.display = "none";
-      links[1].style.display = "none";
-      links[2].style.display = "none";
+      links[0].parentElement.style.display = "none";
+      links[1].parentElement.style.display = "none";
+      links[2].parentElement.style.display = "none";
 
       links[3].removeEventListener("click", showLoginSection);
       sessionStorage.setItem("signedInUser", JSON.stringify(username));
@@ -202,12 +201,5 @@ let burgerBtn=document.querySelector(".burgerMenu");
 let menu=document.querySelector(".header nav ul");
 burgerBtn.addEventListener("click",showMenu)
 function showMenu(){
-  if (menu.style.display=="flex") {
-    menu.style.display="none"
-    
-  }
-  else{
-    menu.style.display="flex"
-  }
-  
+  menu.classList.toggle("active");
 }
