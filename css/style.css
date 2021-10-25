@@ -345,5 +345,12 @@ footer .copyright p {
   main .body-main .DesBtn{
       margin:20px auto;
   }
+  .sendBtn{
+    margin: 1em 0;
+  }
+  main .body-main form textarea {
+    width: 17em;
+  }
+
 }
 
