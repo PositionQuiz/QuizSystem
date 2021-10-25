@@ -197,3 +197,17 @@ function showRegisterSection() {
   toggleActive(columns, columns[3]);
 }
 /************************************************* */
+/*****Burger menu******** */
+let burgerBtn=document.querySelector(".burgerMenu");
+let menu=document.querySelector(".header nav ul");
+burgerBtn.addEventListener("click",showMenu)
+function showMenu(){
+  if (menu.style.display=="flex") {
+    menu.style.display="none"
+    
+  }
+  else{
+    menu.style.display="flex"
+  }
+  
+}

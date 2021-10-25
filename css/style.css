@@ -305,6 +305,9 @@ footer .copyright p {
     main{
         min-height: 50vh;
     }
+    main .body-main form{
+        margin: auto;
+    }
   main .row {
     grid-template-columns: 1fr;
   }

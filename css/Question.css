@@ -80,7 +80,7 @@ header nav a.active {
     font-size: 1.1em;
     font-weight: 700;
     color:  #b8b5c6;
-    margin: 1.25em 0 .5em 0;
+    margin: 20px 0 0 0;
 }
 
 .question .questuion-Text {
@@ -90,6 +90,7 @@ header nav a.active {
     margin-top: .35em;
     margin-bottom: .7em;
     color: #ca006c;
+    text-align: center;
 }
 
 .question .option-Question {
@@ -148,7 +149,7 @@ header nav a.active {
 
 footer .social {
     text-align: center;
-    margin-top: 3em;
+    margin-top: 1em;
 }
 
 footer .social ul {
@@ -196,11 +197,11 @@ footer .copyright span {
 }
 
 @media (max-width:768px) {
-    body {
+    /* body {
         border-radius: 0px;
         width: 100%;
         margin: 0;
-    }
+    } */
 
 
 
@@ -211,6 +212,6 @@ footer .copyright span {
 
 @media (max-width:426px){
     .question .option-Question {
-        width: 70%;
+        width: 90%;
     }
 }

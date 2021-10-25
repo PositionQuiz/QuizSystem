@@ -54,8 +54,6 @@ header nav a:hover {
 header nav a.active {
     transition: .3s;
     font-size: 1.1em;
-   /* background-color: #b8b5c6;*/
-    padding: .3em .9em;
     border-radius: 1em;
     color: #bd5c8f !important;
 }
@@ -135,20 +133,23 @@ footer .copyright span {
     color: #bd5c8f;
 }
 
-@media screen and (max-width: 400px){
-
+@media screen and (max-width: 430px){
+    .Question{
+        width: inherit;
+    }
+    nav ul li{
+        margin: 0;
+    }
     #ans {
         
-        font-size: 0.7em;
+        font-size: 1em;
         
     }
     .Question{
-        font-size: 0.7em;
+        font-size: 1em;
     }
     header nav a.active{
-        font-size: 0.5em;
+        font-size: 1em;
     }
-    .brand a img{
-        width: 100px !important;
-    }
+
 }
