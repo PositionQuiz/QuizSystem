@@ -3,6 +3,7 @@ if(!localStorage.getItem("users")||!sessionStorage.getItem("signedInUser")){
 }
 else{
 const questionNavLink=document.querySelector("nav ul li a.active")
+questionNavLink.style.cursor="unset";
 questionNavLink.innerHTML=JSON.parse(sessionStorage.getItem("signedInUser"))
 let ratio=document.getElementById("percentageSpan");
 let Quizz=JSON.parse(localStorage.getItem("Quiz"));

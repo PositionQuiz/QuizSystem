@@ -72,6 +72,7 @@ else{
 // **********************************************************************************************
 
 const questionNavLink=document.querySelector("nav ul li a.active")
+questionNavLink.style.cursor="unset";
 questionNavLink.innerHTML=JSON.parse(sessionStorage.getItem("signedInUser"))
 const optionList = document.querySelector(".option-Question");
 const nextButton = document.querySelector("#bttnQ");

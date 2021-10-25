@@ -69,6 +69,7 @@ function loginTheUser(e) {
       links[1].parentElement.style.display = "none";
       links[2].parentElement.style.display = "none";
 
+      links[3].style.cursor="unset";
       links[3].removeEventListener("click", showLoginSection);
       sessionStorage.setItem("signedInUser", JSON.stringify(username));
       exist = true;
@@ -133,9 +134,10 @@ function RegisterTheUser(e) {
       let loginLink = document.querySelector(".loginLink");
       loginLink.innerHTML = username;
 
-      links[0].style.display = "none";
-      links[1].style.display = "none";
-      links[2].style.display = "none";
+      links[0].parentElement.style.display = "none";
+      links[1].parentElement.style.display = "none";
+      links[2].parentElement.style.display = "none";
+      links[3].style.cursor="unset";
 
       links[3].removeEventListener("click", showLoginSection);
     }
